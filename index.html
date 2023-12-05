@@ -80,12 +80,38 @@
           >
             Submit
           </button>
-            <button
-                onclick="clearText()"
-                type="submit"
-                class="block  py-2 px-4 rounded-md shadow bg-red-600 text-white font-semibold hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-600"
-            >ClearText</button>
+        <div class="flex flex-row justify-between">
+          <button
+          onclick="clearText()"
+          type="submit"
+          class="block  py-2 px-4 rounded-md shadow bg-red-600 text-white font-semibold hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-600"
+      >ClearText</button>
+    
+    
+  
+    <button
+      onclick="navigator.clipboard.writeText(document.getElementById('message').value)"
+      type="submit"
+      class="block  py-2 px-4 rounded-md shadow bg-yellow-600 text-white font-semibold hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-600"
+    >
+      Copy
+    </button>
+    <button
+    onclick="navigator.clipboard.readText().then(text => document.getElementById('message').value = text)"
+    type="submit"
+    class="block  py-2 px-4 rounded-md shadow bg-green-600 text-white font-semibold hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-600"
+  >
+    Paste
+  </button>
+        </div>
+        
+
+
           
+
+
+
+
       </div>
     </div>
   </body>
