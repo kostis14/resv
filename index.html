@@ -126,7 +126,7 @@
       reservations = reservations
         .split("\n")
         .map((n) => n.trim())
-        .slice(0, -1);
+        .filter((n) => n != "");
       console.log(reservations);
       reservations = reservations.map((resv) => {
         return (resv = {
