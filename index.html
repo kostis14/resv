@@ -132,10 +132,9 @@
         return (resv = {
           numOfPeople: parseInt(
             resv
-              .match(/[0-9]+ατ|[0-9]\s+ατ/gi)
+              .match(/[0-9]+ατ|[0-9]+\s+ατ/gi)
               .join("")
               .replace(" ", "")
-              .replace(/[^0-9]/g, "")
 
               .toUpperCase()
           ),
