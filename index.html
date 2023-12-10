@@ -174,7 +174,12 @@
           },
         });
       });
-
+      //caclucate number of people total 
+      let totalPeople = 0;
+      reservations.forEach((resv) => {
+        totalPeople += parseInt(resv.numOfPeople);
+      });
+      
       //sort by number of doublebottles first, then simplebottles, then names
 
       reservations.sort((a, b) => {
@@ -225,8 +230,7 @@
 
         }\n`;
       });
-      console.log(output);
-      document.getElementById("message").value = output;
+      document.getElementById("message").value = output + `Σύνολο: ${totalPeople}ΑΤ`;
     }
   </script>
 </html>
